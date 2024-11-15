@@ -45,46 +45,72 @@ body{
 }
 
 .tile-2{
-    background: #fff;
+    background: #61e0f4;
     color: #000;
 }
 .tile-4{
-    background: #fff;
-    color: #000;
+    background: #15b2ca;
+    color: #121212;
 }
 .tile-8{
-    background: #fff;
-    color: #000;
+    background: #2992d8;
+    color: #121212;
 }
 .tile-16{
-    background: #fff;
-    color: #000;
+    background: #0a59c8;
+    color: #fff;
 }
 .tile-32{
-    background: #fff;
-    color: #000;
+    background: #1d35d3;
+    color: #fff;
 }
 .tile-64{
-    background: #fff;
-    color: #000;
+    background: #3e30b6;
+    color: #fff;
 }
 .tile-128{
-    background: #fff;
-    color: #000;
+    background: #1e0f9f;
+    color: #fff;
 }
 .tile-256{
-    background: #fff;
-    color: #000;
+    background: #441596;
+    color: #fff;
 }
 .tile-512{
-    background: #fff;
-    color: #000;
+    background: #6c04b1;
+    color: #fff;
 }
 .tile-1024{
-    background: #fff;
-    color: #000;
+    background: #38025c;
+    color: #fff;
 }
 .tile-2048{
-    background: #fff;
-    color: #000;
+    background: #e101ff;
+    color: #fff;
+}
+
+.score-container {
+    margin-top: 20px;
+    font-size: 24px;
+    color: #785aac;
+}
+
+button#restart {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    background-color: #15b2ca;
+    color: #0a3833;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button#restart:hover{
+    background-color: #0a59c8;
+    color: #fff;
+}
+
+.instructions {
+    font-size: 16px;
 }

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>2048</h1>
+        <div class="game-container">
+            <div id="game-board">
+                <!-- for test -->
+                <div class="tile tile-2">2</div>
+                <div class="tile tile-4">4</div>
+                <div class="tile tile-8">8</div>
+                <div class="tile tile-16">16</div>
+                <div class="tile tile-32">32</div>
+                <div class="tile tile-64">64</div>
+                <div class="tile tile-128">128</div>
+                <div class="tile tile-256">256</div>
+                <div class="tile tile-512">512</div>
+                <div class="tile tile-1024">1024</div>
+                <div class="tile tile-2048">2048</div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+                <div class="tile"></div>
+            </div>
+        </div>
+
+        <div class="score-container">
+            <div id="score"></div>
+        </div>
+        <button id="restart">Restart</button>
+
+        <div class="instructions">
+            <p>Use arrow keys to move tiles. Combine tiles with the same number to add them.</p>
+        </div>
+    </div>
+    <script src="game.js"></script>
+</body>
+</html>

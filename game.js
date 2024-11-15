@@ -3,6 +3,7 @@ class Game2048 {
         this.gameBoard = document.getElementById('game-board');
         this.scoreDisplay = document.getElementById('score');
         this.restartButton = document.getElementById('restart');
+        this.gameOverMessage = document.getElementById('game-over');
         this.initGame();
         this.setupEventListeners();
     }
@@ -10,6 +11,7 @@ class Game2048 {
     initGame() {
         this.tiles = Array(16).fill(null);
         this.score = 0;
+        this.gameOverMessage.classList.add('hidden');
         this.addRandomTile();
         this.addRandomTile();
         this.renderBoard();
@@ -79,6 +81,27 @@ class Game2048 {
             this.addRandomTile();
             this.renderBoard();
         }
+
+        if(this.checkGameOver()) {
+            this.gameOverMessage.classList.remove('hidden');
+        }
+    }
+
+    checkGameOver() {
+        if (this.tiles.includes(null)) return false;
+        
+        for(let i = 0; i < 16; i++){
+            const tile = this.tiles[i];
+            const adjacentIndices = [
+                i % 4 !== 3 ? i + 1 : null,
+                i + 4 < 16 ? i + 4 : null
+            ];
+
+            if(adjacentIndices.some(index => index !== null && this.tiles[index] === tile)) {
+                return false;
+            }
+        }
+        return true;
     }
 
     createOrder(direction) {
